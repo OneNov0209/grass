@@ -50,8 +50,6 @@ USER_ID=
 
 ORIGIN_URL=https://app.getgrass.io/
 
-ctrl x y etener
-
 4. **Buat layanan systemd**
 ```bash
 sudo nano /etc/systemd/system/grassbot.service
@@ -71,6 +69,8 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ````
+ctrl x y etener
+
 6. ***Aktifkan layanan**
 ```bash
 sudo systemctl daemon-reload
