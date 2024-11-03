@@ -93,6 +93,11 @@ sudo systemctl status grassbot.service
 sudo journalctl -u grassbot.service -f -o cat
 ```
 
+***Restart**
+```bash
+sudo systemctl restart grassbot.service
+```
+
 ### Register ###
 Link: https://app.getgrass.io/register/?referralCode=MLsBtbbiLMvTPWA
 
