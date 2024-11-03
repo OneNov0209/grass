@@ -7,6 +7,7 @@ import uuid
 import websockets
 from loguru import logger
 from fake_useragent import UserAgent
+from dotenv import load_dotenv  # Import load_dotenv
 
 user_agent = UserAgent(os='windows', browsers='chrome')
 random_user_agent = user_agent.random
