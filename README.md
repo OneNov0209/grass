@@ -57,7 +57,6 @@ ctrl x y etener
 sudo nano /etc/systemd/system/grassbot.service
 ```
 5. ***Tambahahkan script ini***:
-````
 ```
 [Unit]
 Description=Grass Bot Service
