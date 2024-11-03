@@ -16,6 +16,7 @@ load_dotenv()
 # Retrieve USER_ID and ORIGIN_URL from environment variables
 user_id = os.getenv('USER_ID')  # Ganti dengan ID pengguna Anda dari .env
 origin_url = os.getenv('ORIGIN_URL')
+device_ip = os.getenv('DEVICE_IP')  # Menambahkan pengambilan DEVICE_IP
 
 user_agent = UserAgent(os='windows', browsers='chrome')
 random_user_agent = user_agent.random
