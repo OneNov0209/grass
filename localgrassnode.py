@@ -1,3 +1,4 @@
+import os
 import asyncio
 import random
 import ssl
@@ -8,6 +9,13 @@ import websockets
 from loguru import logger
 from fake_useragent import UserAgent
 from dotenv import load_dotenv  # Import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve USER_ID and ORIGIN_URL from environment variables
+user_id = os.getenv('USER_ID')  # Ganti dengan ID pengguna Anda dari .env
+origin_url = os.getenv('ORIGIN_URL')
 
 user_agent = UserAgent(os='windows', browsers='chrome')
 random_user_agent = user_agent.random
@@ -20,7 +28,7 @@ async def connect_to_wss(user_id):
             await asyncio.sleep(random.uniform(0.1, 1))
             custom_headers = {
                 "User-Agent": random_user_agent,
-                "Origin": "https://app.getgrass.io/"
+                "Origin": origin_url  # Menggunakan URL dari .env
             }
             ssl_context = ssl.create_default_context()
             ssl_context.check_hostname = False
@@ -68,8 +76,7 @@ async def connect_to_wss(user_id):
             logger.error(e)
 
 async def main():
-    _user_id = "2o8Jir31EtHOLxNqGW49gmLqQ6L"  # Ganti dengan ID pengguna Anda
-    await connect_to_wss(_user_id)
+    await connect_to_wss(user_id)
 
 if __name__ == '__main__':
     asyncio.run(main())
