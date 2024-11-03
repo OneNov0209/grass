@@ -35,7 +35,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal Grass Bot:
    cd grass
    ```
 
- 2. ## install requirements
+ 2. ***install requirements***
   ```bash
 pip install -r requirements.txt
 ```
@@ -45,15 +45,18 @@ pip install -r requirements.txt
 sudo nano .env
 ```
 isi dengan Id grass:
+
 USER_ID=
+
 ORIGIN_URL=https://app.getgrass.io/
+
 ctrl x y etener
 
 4. **Buat layanan systemd**
 ```bash
 sudo nano /etc/systemd/system/grassbot.service
 ```
-***Tambahahkan script ini***:
+5. ***Tambahahkan script ini***:
 ````
 ```
 [Unit]
@@ -69,7 +72,7 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ````
-5. ***Aktifkan layanan**
+6. ***Aktifkan layanan**
 ```bash
 sudo systemctl daemon-reload
 ```
@@ -79,11 +82,11 @@ sudo systemctl enable grassbot.service
 ```bash
 sudo systemctl start grassbot.service
 ```
-6. ***Cek statsus***
+7. ***Cek statsus***
 ```bash
 sudo systemctl status grassbot.service
 ```
-7. ***cek logs**
+8. ***cek logs**
 ```bash
 sudo journalctl -u grassbot.service -f -o cat
 ```
