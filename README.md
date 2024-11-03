@@ -43,16 +43,14 @@ pip install -r requirements.txt
 pip install python-dotenv
 ```
 
-3. **Buat file .env:**
+3. **Edit File .env:**
 ```bash
-sudo nano .env
+nano .env
 ```
 isi dengan Id grass, url aplikasi dasboard dan Ip Vps anda, Dengan format seperti dibawah:
 
 USER_ID=
-
 ORIGIN_URL=https://app.getgrass.io/
-
 DEVICE_IP=
 
 4. **Buat layanan systemd**
