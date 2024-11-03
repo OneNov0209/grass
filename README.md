@@ -39,6 +39,9 @@ Ikuti langkah-langkah di bawah ini untuk menginstal Grass Bot:
   ```bash
 pip install -r requirements.txt
 ```
+```
+pip install python-dotenv
+```
 
 3. **Buat file .env:**
 ```bash
