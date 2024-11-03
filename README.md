@@ -50,13 +50,19 @@ nano .env
 isi dengan Id grass, url aplikasi dasboard dan Ip Vps anda, Dengan format seperti dibawah:
 
 USER_ID=
+
 ORIGIN_URL=https://app.getgrass.io/
+
 DEVICE_IP=
 
 ***cari UserID pakai cara ini:**
-login ke web grass , terus inspect / f12 , klik console
+login ke web grass , 
+terus inspect / f12 ,
+klik console
 paste
+```
 localStorage.getItem('userId')
+```
 kalau ga bisa paste ketik allow pasting enter
 baru paste localStorage.getItem('userId')enter lagi
 
