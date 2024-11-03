@@ -55,7 +55,7 @@ sudo nano /etc/systemd/system/grassbot.service
 ```
 ***Tambahahkan script ini***:
 ````
-```bash
+```
 [Unit]
 Description=Grass Bot Service
 After=network.target
